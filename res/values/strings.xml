@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello samples!</string>
+    <string name="app_name">samples</string>
+
+    <!-- Recycling List Activity !-->
+    <string name="recycling_list_activity">Recycling List Activity</string>
+    <string name="recycled_text">%d : Recycled View.</string>
+    <string name="unrecycled_text">%d : Unrecycled.</string>
+
+</resources>
