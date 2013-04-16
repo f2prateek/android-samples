@@ -27,7 +27,6 @@ public class RecyclingListActivity extends Activity {
     }
 
     private class SimpleTextAdapter extends BaseAdapter {
-
         private final int count;
         private final Context context;
 
@@ -49,27 +48,15 @@ public class RecyclingListActivity extends Activity {
         }
 
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view;
             if (convertView == null) {
-                view = LayoutInflater.from(context).inflate(R.layout.recycling_list_item, parent, false);
-                ViewHolder viewHolder = new ViewHolder();
-                viewHolder.textView = (TextView) view.findViewById(R.id.textView);
-                viewHolder.imageView = (ImageView) view.findViewById(R.id.imageView);
-                view.setTag(viewHolder);
-                viewHolder.textView.setText(context.getString(R.string.unrecycled_text, position));
-                viewHolder.imageView.setImageResource(R.drawable.ic_action_unrecycled);
+                convertView = LayoutInflater.from(context).inflate(R.layout.recycling_list_item, parent, false);
+                ((TextView) convertView.findViewById(R.id.textView)).setText(context.getString(R.string.unrecycled_text, position));
+                ((ImageView) convertView.findViewById(R.id.imageView)).setImageResource(R.drawable.ic_action_unrecycled);
             } else {
-                view = convertView;
-                ViewHolder viewHolder = (ViewHolder) view.getTag();
-                viewHolder.textView.setText(context.getString(R.string.recycled_text, position));
-                viewHolder.imageView.setImageResource(R.drawable.ic_action_recycled);
+                ((TextView) convertView.findViewById(R.id.textView)).setText(context.getString(R.string.recycled_text, position));
+                ((ImageView) convertView.findViewById(R.id.imageView)).setImageResource(R.drawable.ic_action_recycled);
             }
-            return view;
-        }
-
-        private class ViewHolder {
-            TextView textView;
-            ImageView imageView;
+            return convertView;
         }
     }
 
