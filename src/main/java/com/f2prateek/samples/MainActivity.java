@@ -24,7 +24,7 @@ public class MainActivity extends ListActivity {
         switch (position) {
             default:
             case 0:
-                intent = new Intent(this, RecyclingListActivity.class);
+                intent = new Intent(this, RecyclingViewListActivity.class);
                 break;
         }
         startActivity(intent);

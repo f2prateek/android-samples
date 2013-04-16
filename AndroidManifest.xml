@@ -15,7 +15,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RecyclingListActivity"
+        <activity android:name=".RecyclingViewListActivity"
                   android:label="@string/recycling_list_activity"/>
     </application>
 
