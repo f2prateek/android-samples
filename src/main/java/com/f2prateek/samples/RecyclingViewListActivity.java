@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class RecyclingViewListActivity extends ListActivity {
 
     private static final int SAMPLE_SIZE = 50;
-    private static String TAG = "Recycling Views in ListView";
+    private static String TAG = "RecyclingViewListActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
