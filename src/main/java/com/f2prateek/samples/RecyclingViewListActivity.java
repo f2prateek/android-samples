@@ -49,14 +49,13 @@ public class RecyclingViewListActivity extends ListActivity {
             if (convertView == null) {
                 // If it is null, inflate a new view.
                 textView = new TextView(RecyclingViewListActivity.this);
-
                 // For the sample, we're also setting some resources that are displayed based on the recycled state.
                 text = getResources().getString(R.string.unrecycled_text, position);
                 drawable = getResources().getDrawable(R.drawable.ic_action_unrecycled);
             } else {
                 // If it is not null, we have a view that is recycled.
                 // Get your widgets by
-                // a. Casting (if it is the root view
+                // a. Casting (if it is the root view)
                 // b. findViewById
                 // c. ViewHolder pattern
                 textView = (TextView) convertView;
