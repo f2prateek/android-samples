@@ -1,4 +1,4 @@
-package com.f2prateek;
+package com.f2prateek.samples;
 
 import android.app.ListActivity;
 import android.graphics.drawable.Drawable;
